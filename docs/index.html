@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orchestration Edit Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="inner">
+      <p class="eyebrow">External validation demo</p>
+      <h1>Orchestration-Inspired MIDI Edits</h1>
+      <p class="summary">This static demo presents three symbolic MIDI edits for supervisor review. Each section is organized by edit type and pairs the original audio with a pre-synthesized transformed MP3.</p>
+      <nav class="quick-links" aria-label="Primary links">
+        <a href="https://github.com/MicaAnt/devMusicEdit/blob/main/src/orchestration_edits.py">View edit source code</a>
+        <a href="https://github.com/matthieu-cervera/midi-editing">Upstream reference: Matthieu Cervera's midi-editing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="inner">
+    <section class="note-panel" aria-labelledby="review-note">
+      <h2 id="review-note">Review path</h2>
+      <p>The primary path is listening and source inspection: use the audio controls below, then inspect <code>src/orchestration_edits.py</code>. The MIDI links are included for reproducibility if deeper inspection is useful.</p>
+    </section>
+
+
+    <section class="edit-section" id="Shift_Octave">
+      <div class="section-heading">
+        <h2>Shift_Octave</h2>
+        <p>Moves the selected non-drum instrument line one octave up or down, preserving timing and note durations.</p>
+      </div>
+      <div class="comparison-grid">
+
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 0 - String Ensemble</h3>
+          <p class="prompt"><strong>Prompt:</strong> Shift the String Ensemble up by one octave.</p>
+          <p class="context-line"><strong>Context:</strong> F# minor, 4/4, Allegro (135 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> String Ensemble, Trumpet, Brass Section, Synth Strings, Drums</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - up</div>
+            <audio controls preload="metadata" src="audio/row0_shift_octave_up.mp3"></audio>
+            <a class="file-link" href="midi/row00000_shift_octave_up.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 64 - Acoustic Guitar</h3>
+          <p class="prompt"><strong>Prompt:</strong> Shift the Acoustic Guitar up by one octave.</p>
+          <p class="context-line"><strong>Context:</strong> C major, 2/4, Moderato (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Acoustic Guitar, Vibraphone, Voice Oohs, Glockenspiel</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - up</div>
+            <audio controls preload="metadata" src="audio/row64_shift_octave_up.mp3"></audio>
+            <a class="file-link" href="midi/row00064_shift_octave_up.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 76 - Clarinet</h3>
+          <p class="prompt"><strong>Prompt:</strong> Shift the Clarinet up by one octave.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Clarinet, Piano, Ocarina</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - up</div>
+            <audio controls preload="metadata" src="audio/row76_shift_octave_up.mp3"></audio>
+            <a class="file-link" href="midi/row00076_shift_octave_up.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 116 - Electric Bass</h3>
+          <p class="prompt"><strong>Prompt:</strong> Shift the Electric Bass up by one octave.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (84 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Ocarina, Hammond Organ, Electric Bass, Drums, Acoustic Guitar</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - up</div>
+            <audio controls preload="metadata" src="audio/row116_shift_octave_up.mp3"></audio>
+            <a class="file-link" href="midi/row00116_shift_octave_up.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 0 - String Ensemble</h3>
+          <p class="prompt"><strong>Prompt:</strong> Shift the String Ensemble down by one octave.</p>
+          <p class="context-line"><strong>Context:</strong> F# minor, 4/4, Allegro (135 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> String Ensemble, Trumpet, Brass Section, Synth Strings, Drums</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - down</div>
+            <audio controls preload="metadata" src="audio/row0_shift_octave_down.mp3"></audio>
+            <a class="file-link" href="midi/row00000_shift_octave_down.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 64 - Acoustic Guitar</h3>
+          <p class="prompt"><strong>Prompt:</strong> Shift the Acoustic Guitar down by one octave.</p>
+          <p class="context-line"><strong>Context:</strong> C major, 2/4, Moderato (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Acoustic Guitar, Vibraphone, Voice Oohs, Glockenspiel</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - down</div>
+            <audio controls preload="metadata" src="audio/row64_shift_octave_down.mp3"></audio>
+            <a class="file-link" href="midi/row00064_shift_octave_down.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 76 - Clarinet</h3>
+          <p class="prompt"><strong>Prompt:</strong> Shift the Clarinet down by one octave.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Clarinet, Piano, Ocarina</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - down</div>
+            <audio controls preload="metadata" src="audio/row76_shift_octave_down.mp3"></audio>
+            <a class="file-link" href="midi/row00076_shift_octave_down.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 116 - Electric Bass</h3>
+          <p class="prompt"><strong>Prompt:</strong> Shift the Electric Bass down by one octave.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (84 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Ocarina, Hammond Organ, Electric Bass, Drums, Acoustic Guitar</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - down</div>
+            <audio controls preload="metadata" src="audio/row116_shift_octave_down.mp3"></audio>
+            <a class="file-link" href="midi/row00116_shift_octave_down.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </section>
+
+
+    <section class="edit-section" id="Double_Octave">
+      <div class="section-heading">
+        <h2>Double_Octave</h2>
+        <p>Keeps the original line and adds a duplicate line one octave above or below the selected instrument.</p>
+      </div>
+      <div class="comparison-grid">
+
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 0 - String Ensemble</h3>
+          <p class="prompt"><strong>Prompt:</strong> Double the String Ensemble one octave above.</p>
+          <p class="context-line"><strong>Context:</strong> F# minor, 4/4, Allegro (135 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> String Ensemble, Trumpet, Brass Section, Synth Strings, Drums</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - above</div>
+            <audio controls preload="metadata" src="audio/row0_double_octave_above.mp3"></audio>
+            <a class="file-link" href="midi/row00000_double_octave_above.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 64 - Acoustic Guitar</h3>
+          <p class="prompt"><strong>Prompt:</strong> Double the Acoustic Guitar one octave above.</p>
+          <p class="context-line"><strong>Context:</strong> C major, 2/4, Moderato (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Acoustic Guitar, Vibraphone, Voice Oohs, Glockenspiel</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - above</div>
+            <audio controls preload="metadata" src="audio/row64_double_octave_above.mp3"></audio>
+            <a class="file-link" href="midi/row00064_double_octave_above.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 76 - Clarinet</h3>
+          <p class="prompt"><strong>Prompt:</strong> Double the Clarinet one octave above.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Clarinet, Piano, Ocarina</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - above</div>
+            <audio controls preload="metadata" src="audio/row76_double_octave_above.mp3"></audio>
+            <a class="file-link" href="midi/row00076_double_octave_above.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 116 - Electric Bass</h3>
+          <p class="prompt"><strong>Prompt:</strong> Double the Electric Bass one octave above.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (84 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Ocarina, Hammond Organ, Electric Bass, Drums, Acoustic Guitar</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - above</div>
+            <audio controls preload="metadata" src="audio/row116_double_octave_above.mp3"></audio>
+            <a class="file-link" href="midi/row00116_double_octave_above.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 0 - String Ensemble</h3>
+          <p class="prompt"><strong>Prompt:</strong> Double the String Ensemble one octave below.</p>
+          <p class="context-line"><strong>Context:</strong> F# minor, 4/4, Allegro (135 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> String Ensemble, Trumpet, Brass Section, Synth Strings, Drums</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - below</div>
+            <audio controls preload="metadata" src="audio/row0_double_octave_below.mp3"></audio>
+            <a class="file-link" href="midi/row00000_double_octave_below.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 64 - Acoustic Guitar</h3>
+          <p class="prompt"><strong>Prompt:</strong> Double the Acoustic Guitar one octave below.</p>
+          <p class="context-line"><strong>Context:</strong> C major, 2/4, Moderato (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Acoustic Guitar, Vibraphone, Voice Oohs, Glockenspiel</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - below</div>
+            <audio controls preload="metadata" src="audio/row64_double_octave_below.mp3"></audio>
+            <a class="file-link" href="midi/row00064_double_octave_below.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 76 - Clarinet</h3>
+          <p class="prompt"><strong>Prompt:</strong> Double the Clarinet one octave below.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Clarinet, Piano, Ocarina</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - below</div>
+            <audio controls preload="metadata" src="audio/row76_double_octave_below.mp3"></audio>
+            <a class="file-link" href="midi/row00076_double_octave_below.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 116 - Electric Bass</h3>
+          <p class="prompt"><strong>Prompt:</strong> Double the Electric Bass one octave below.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (84 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Ocarina, Hammond Organ, Electric Bass, Drums, Acoustic Guitar</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - below</div>
+            <audio controls preload="metadata" src="audio/row116_double_octave_below.mp3"></audio>
+            <a class="file-link" href="midi/row00116_double_octave_below.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </section>
+
+
+    <section class="edit-section" id="Make_Staccato">
+      <div class="section-heading">
+        <h2>Make_Staccato</h2>
+        <p>Shortens notes in the selected instrument line with a deterministic duration scaling rule.</p>
+      </div>
+      <div class="comparison-grid">
+
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 0 - String Ensemble</h3>
+          <p class="prompt"><strong>Prompt:</strong> Make the String Ensemble line staccato.</p>
+          <p class="context-line"><strong>Context:</strong> F# minor, 4/4, Allegro (135 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> String Ensemble, Trumpet, Brass Section, Synth Strings, Drums</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - staccato</div>
+            <audio controls preload="metadata" src="audio/row0_make_staccato.mp3"></audio>
+            <a class="file-link" href="midi/row00000_make_staccato.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 64 - Acoustic Guitar</h3>
+          <p class="prompt"><strong>Prompt:</strong> Make the Acoustic Guitar line staccato.</p>
+          <p class="context-line"><strong>Context:</strong> C major, 2/4, Moderato (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Acoustic Guitar, Vibraphone, Voice Oohs, Glockenspiel</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - staccato</div>
+            <audio controls preload="metadata" src="audio/row64_make_staccato.mp3"></audio>
+            <a class="file-link" href="midi/row00064_make_staccato.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 76 - Clarinet</h3>
+          <p class="prompt"><strong>Prompt:</strong> Make the Clarinet line staccato.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (100 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Clarinet, Piano, Ocarina</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - staccato</div>
+            <audio controls preload="metadata" src="audio/row76_make_staccato.mp3"></audio>
+            <a class="file-link" href="midi/row00076_make_staccato.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      <article class="comparison-card">
+        <div class="comparison-meta">
+          <h3>MidiCaps row 116 - Electric Bass</h3>
+          <p class="prompt"><strong>Prompt:</strong> Make the Electric Bass line staccato.</p>
+          <p class="context-line"><strong>Context:</strong> Bb major, 4/4, Moderate tempo (84 BPM)</p>
+          <p class="context-line"><strong>Instruments:</strong> Ocarina, Hammond Organ, Electric Bass, Drums, Acoustic Guitar</p>
+        </div>
+        <div class="audio-pair">
+
+          <div class="player-block original">
+            <div class="player-label">Original</div>
+            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
+          </div>
+
+          <div class="player-block transformed">
+            <div class="player-label">Transformed - staccato</div>
+            <audio controls preload="metadata" src="audio/row116_make_staccato.mp3"></audio>
+            <a class="file-link" href="midi/row00116_make_staccato.mid">Transformed MIDI</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="inner">
+      <p>Examples are selected from MidiCaps metadata and rendered from local MIDI files for this validation pass. These edits are local orchestration-inspired extensions in the style/reference frame of Matthieu Cervera's <a href="https://github.com/matthieu-cervera/midi-editing">midi-editing</a> repository; they do not modify the upstream repository.</p>
+    </div>
+  </footer>
+</body>
+</html>

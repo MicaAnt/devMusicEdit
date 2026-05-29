@@ -1,0 +1,17 @@
+# Local study environment for musicEdit.
+# Mirrors the current upstream midi-editing requirements so this project can be
+# rebuilt even though upstream/ itself is intentionally not committed.
+scipy
+numpy
+pretty_midi
+pyfluidsynth
+transformers
+torch
+soundfile
+datasets
+laion-clap
+julius
+torchvision
+torchaudio
+matplotlib
+seaborn
