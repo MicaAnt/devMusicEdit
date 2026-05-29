@@ -30,7 +30,7 @@ This work follows the style and framing of Matthieu Cervera's `midi-editing` pro
 
 ## Reproducibility
 
-The demo includes MP3 previews for listening and MIDI files for inspection. To verify the package locally:
+The demo includes MP3 previews rendered with FluidSynth and a General MIDI soundfont, plus MIDI files for inspection. To verify the package locally:
 
 ```bash
 python scripts/verify_demo_assets.py
