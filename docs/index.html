@@ -11,7 +11,7 @@
     <div class="inner">
       <p class="eyebrow">External validation demo</p>
       <h1>Orchestration-Inspired MIDI Edits</h1>
-      <p class="summary">This static demo presents three symbolic MIDI edits for supervisor review. Each section is organized by edit type and pairs the original audio with a pre-synthesized transformed MP3.</p>
+      <p class="summary">Three symbolic MIDI edits are shown below with pre-rendered original/transformed audio comparisons, grouped by edit type.</p>
       <nav class="quick-links" aria-label="Primary links">
         <a href="https://github.com/MicaAnt/devMusicEdit/blob/main/src/orchestration_edits.py">View edit source code</a>
         <a href="https://github.com/matthieu-cervera/midi-editing">Upstream reference: Matthieu Cervera's midi-editing</a>
@@ -21,8 +21,8 @@
 
   <main class="inner">
     <section class="note-panel" aria-labelledby="review-note">
-      <h2 id="review-note">Review path</h2>
-      <p>The primary path is listening and source inspection: use the audio controls below, then inspect <code>src/orchestration_edits.py</code>. The MIDI links are included for reproducibility if deeper inspection is useful.</p>
+      <h2 id="review-note">Review</h2>
+      <p>Listen to the paired examples below and inspect <code>src/orchestration_edits.py</code> for the implementation. MIDI files are included for reproducibility.</p>
     </section>
 
 
@@ -44,13 +44,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_original.mp3"></audio>
             <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - up</div>
-            <audio controls preload="metadata" src="audio/row0_shift_octave_up.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_shift_octave_up.mp3"></audio>
             <a class="file-link" href="midi/row00000_shift_octave_up.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -66,13 +66,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_original.mp3"></audio>
             <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - up</div>
-            <audio controls preload="metadata" src="audio/row64_shift_octave_up.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_shift_octave_up.mp3"></audio>
             <a class="file-link" href="midi/row00064_shift_octave_up.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -88,13 +88,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_original.mp3"></audio>
             <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - up</div>
-            <audio controls preload="metadata" src="audio/row76_shift_octave_up.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_shift_octave_up.mp3"></audio>
             <a class="file-link" href="midi/row00076_shift_octave_up.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -110,13 +110,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_original.mp3"></audio>
             <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - up</div>
-            <audio controls preload="metadata" src="audio/row116_shift_octave_up.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_shift_octave_up.mp3"></audio>
             <a class="file-link" href="midi/row00116_shift_octave_up.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -132,13 +132,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_original.mp3"></audio>
             <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - down</div>
-            <audio controls preload="metadata" src="audio/row0_shift_octave_down.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_shift_octave_down.mp3"></audio>
             <a class="file-link" href="midi/row00000_shift_octave_down.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -154,13 +154,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_original.mp3"></audio>
             <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - down</div>
-            <audio controls preload="metadata" src="audio/row64_shift_octave_down.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_shift_octave_down.mp3"></audio>
             <a class="file-link" href="midi/row00064_shift_octave_down.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -176,13 +176,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_original.mp3"></audio>
             <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - down</div>
-            <audio controls preload="metadata" src="audio/row76_shift_octave_down.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_shift_octave_down.mp3"></audio>
             <a class="file-link" href="midi/row00076_shift_octave_down.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -198,13 +198,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_original.mp3"></audio>
             <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - down</div>
-            <audio controls preload="metadata" src="audio/row116_shift_octave_down.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_shift_octave_down.mp3"></audio>
             <a class="file-link" href="midi/row00116_shift_octave_down.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -231,13 +231,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_original.mp3"></audio>
             <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - above</div>
-            <audio controls preload="metadata" src="audio/row0_double_octave_above.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_double_octave_above.mp3"></audio>
             <a class="file-link" href="midi/row00000_double_octave_above.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -253,13 +253,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_original.mp3"></audio>
             <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - above</div>
-            <audio controls preload="metadata" src="audio/row64_double_octave_above.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_double_octave_above.mp3"></audio>
             <a class="file-link" href="midi/row00064_double_octave_above.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -275,13 +275,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_original.mp3"></audio>
             <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - above</div>
-            <audio controls preload="metadata" src="audio/row76_double_octave_above.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_double_octave_above.mp3"></audio>
             <a class="file-link" href="midi/row00076_double_octave_above.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -297,13 +297,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_original.mp3"></audio>
             <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - above</div>
-            <audio controls preload="metadata" src="audio/row116_double_octave_above.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_double_octave_above.mp3"></audio>
             <a class="file-link" href="midi/row00116_double_octave_above.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -319,13 +319,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_original.mp3"></audio>
             <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - below</div>
-            <audio controls preload="metadata" src="audio/row0_double_octave_below.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_double_octave_below.mp3"></audio>
             <a class="file-link" href="midi/row00000_double_octave_below.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -341,13 +341,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_original.mp3"></audio>
             <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - below</div>
-            <audio controls preload="metadata" src="audio/row64_double_octave_below.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_double_octave_below.mp3"></audio>
             <a class="file-link" href="midi/row00064_double_octave_below.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -363,13 +363,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_original.mp3"></audio>
             <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - below</div>
-            <audio controls preload="metadata" src="audio/row76_double_octave_below.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_double_octave_below.mp3"></audio>
             <a class="file-link" href="midi/row00076_double_octave_below.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -385,13 +385,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_original.mp3"></audio>
             <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - below</div>
-            <audio controls preload="metadata" src="audio/row116_double_octave_below.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_double_octave_below.mp3"></audio>
             <a class="file-link" href="midi/row00116_double_octave_below.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -418,13 +418,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row0_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_original.mp3"></audio>
             <a class="file-link" href="midi/row00000_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - staccato</div>
-            <audio controls preload="metadata" src="audio/row0_make_staccato.mp3"></audio>
+            <audio controls preload="none" src="audio/row0_make_staccato.mp3"></audio>
             <a class="file-link" href="midi/row00000_make_staccato.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -440,13 +440,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row64_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_original.mp3"></audio>
             <a class="file-link" href="midi/row00064_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - staccato</div>
-            <audio controls preload="metadata" src="audio/row64_make_staccato.mp3"></audio>
+            <audio controls preload="none" src="audio/row64_make_staccato.mp3"></audio>
             <a class="file-link" href="midi/row00064_make_staccato.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -462,13 +462,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row76_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_original.mp3"></audio>
             <a class="file-link" href="midi/row00076_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - staccato</div>
-            <audio controls preload="metadata" src="audio/row76_make_staccato.mp3"></audio>
+            <audio controls preload="none" src="audio/row76_make_staccato.mp3"></audio>
             <a class="file-link" href="midi/row00076_make_staccato.mid">Transformed MIDI</a>
           </div>
         </div>
@@ -484,13 +484,13 @@
 
           <div class="player-block original">
             <div class="player-label">Original</div>
-            <audio controls preload="metadata" src="audio/row116_original.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_original.mp3"></audio>
             <a class="file-link" href="midi/row00116_original.mid">Original MIDI</a>
           </div>
 
           <div class="player-block transformed">
             <div class="player-label">Transformed - staccato</div>
-            <audio controls preload="metadata" src="audio/row116_make_staccato.mp3"></audio>
+            <audio controls preload="none" src="audio/row116_make_staccato.mp3"></audio>
             <a class="file-link" href="midi/row00116_make_staccato.mid">Transformed MIDI</a>
           </div>
         </div>
